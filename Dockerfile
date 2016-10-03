@@ -22,5 +22,8 @@ RUN cd node-v* && ./configure && make && make install
 RUN npm install -g wscat
 #Instalar curl
 RUN yum install -y curl
-
+#Copiar los archivos de configuracion http.conf, ari.conf y extensions.conf para hola mundo de ARI
+COPY ari.conf /etc/asterisk/
+COPY http.conf /etc/asterisk/
+COPY extensions.conf /etc/asterisk/
 CMD ["/bin/bash"]
