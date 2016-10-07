@@ -26,4 +26,5 @@ RUN yum install -y curl
 COPY ari.conf /etc/asterisk/
 COPY http.conf /etc/asterisk/
 COPY extensions.conf /etc/asterisk/
+EXPOSE 8088
 CMD ["/bin/bash"]
